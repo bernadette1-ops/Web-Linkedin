@@ -80,10 +80,10 @@ function createPostCard(post) {
         <span>${post.comments} comments • ${post.reposts} reposts</span>
       </div>
       <div class="post-actions-row">
-        <button><img src="like.png" alt="Like" /><span>Like</span></button>
-        <button><img src="comment.png" alt="Comment" /><span>Comment</span></button>
-        <button><img src="repost.png" alt="Repost" /><span>Repost</span></button>
-        <button><img src="send.png" alt="Send" /><span>Send</span></button>
+        <button><img src="foto/like.png" alt="Like" /><span>Like</span></button>
+        <button><img src="foto/comment.png" alt="Comment" /><span>Comment</span></button>
+        <button><img src="foto/repost.png" alt="Repost" /><span>Repost</span></button>
+        <button><img src="foto/send.png" alt="Send" /><span>Send</span></button>
       </div>
     </div>
   `;
