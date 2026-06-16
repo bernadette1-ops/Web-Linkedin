@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkedIn Profile Redesign - Lindsy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-u6O1axN7+avvS1QzH7Hwz2Jt5/oymE1Uq+wNxxDfi4Z84WU44uWmsajdGq/cvK3U4RHY1sxjYrmxB+QZ7DUxivg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <a href="index.html" class="brand">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn logo" />
+        </a>
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search" aria-label="Search" />
+        </div>
+      </div>
+
+      <nav class="navbar-right">
+        <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-button">
+            <img src="foto/home.png" alt="Home" />
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-button">
+            <img src="foto/network.png" alt="My Network" />
+            <span>My Network</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="job.html" class="nav-button">
+            <img src="foto/job.png" alt="Jobs" />
+            <span>Jobs</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="inbox.html" class="nav-button">
+            <img src="foto/inbox.png" alt="Inbox" />
+            <span>Inbox</span>
+            <span class="nav-badge">3</span>
+          </a>
+        </li>
+        <li class="nav-item profile-item">
+          <a href="profile_page.html" class="profile-button active">
+            <img src="foto/profile.png" alt="Profile" />
+            <span>Me <i class="fas fa-caret-down"></i></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <main class="profile-layout">
+      <div class="profile-column">
+        <section class="card profile-card">
+          <div class="profile-card__banner"></div>
+          <div class="profile-card__avatar">
+            <img src="foto/profile.png" alt="Lindsy" />
+          </div>
+          <div class="profile-card__body">
+            <div class="profile-card__hero">
+              <div style="padding-top: 60px">
+                <h1>Lindsy</h1>
+                <p class="headline">Information Systems Major | Computer Science Student</p>
+              </div>
+              <button class="icon-btn" aria-label="Edit profile"><i class="fas fa-pen"></i></button>
+            </div>
+
+            <div class="profile-tags">
+              <span class="tag"><i class="fas fa-graduation-cap"></i>University of Brawijaya</span>
+              <span class="tag"><i class="fas fa-location-dot"></i>Malang, East Java</span>
+              <span class="tag"><i class="fas fa-user-group"></i>500+ connections</span>
+            </div>
+
+            <div class="profile-actions">
+              <button class="btn btn-primary"><i class="fas fa-check-circle"></i>Open to</button>
+              <button id="open-edit-modal" class="btn btn-secondary"><i class="fas fa-user-edit"></i>Edit Profile</button>
+              <button class="btn btn-secondary"><i class="fas fa-plus"></i>Add section</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="card content-card">
+          <div class="card-header">
+            <h2>About</h2>
+            <button class="icon-btn" aria-label="Edit about"><i class="fas fa-pen"></i></button>
+          </div>
+          <div class="card-content">
+            <p class="about-text">
+              I am an Information Systems student with a strong interest in technology, data analysis, and problem solving. I build efficient solutions, analyze workflows, and contribute to collaborative academic projects.
+            </p>
+
+            <div class="profile-form-mockup">
+              <p><strong>One integrated profile flow:</strong> Edit About, Experience, and Education in one streamlined form to keep details recruiter-ready.</p>
+              <button class="btn btn-secondary btn-small"><i class="fas fa-pencil-alt"></i>Edit profile details</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="card content-card">
+          <div class="card-header">
+            <h2>Experience</h2>
+            <button class="icon-btn" aria-label="Add experience"><i class="fas fa-plus"></i></button>
+          </div>
+          <div class="card-content experience-list">
+            <article class="timeline-item">
+              <div class="timeline-header">
+                <div>
+                  <p class="timeline-role">Student Assistant - Data Analysis</p>
+                  <p class="timeline-company">University of Brawijaya</p>
+                </div>
+                <span class="timeline-date">2024 – Present</span>
+              </div>
+              <p class="timeline-desc" id="display-exp-desc">
+                Designed dashboards and insights for academic research, improving reporting efficiency by 30% and enabling faster decision-making across faculty teams.
+              </p>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-header">
+                <div>
+                  <p class="timeline-role">IT Project Intern</p>
+                  <p class="timeline-company">TechCampus Solutions</p>
+                </div>
+                <span class="timeline-date">2023 – 2024</span>
+              </div>
+              <p class="timeline-desc">
+                Collaborated on system implementation, automated reporting tasks, and supported dashboard delivery for stakeholder reviews.
+              </p>
+            </article>
+          </div>
+
+          <div class="comment-section">
+            <label for="commentInput" class="sr-only">Tulis komentar</label>
+            <textarea id="commentInput" rows="2" placeholder="Tulis komentar atau feedback..." ></textarea>
+            <div class="comment-actions">
+              <button id="postCommentBtn" class="btn btn-secondary btn-small">Post</button>
+            </div>
+            <div class="comments-list" id="commentsList"></div>
+          </div>
+        </section>
+
+        <section class="card content-card">
+          <div class="card-header">
+            <h2>Education</h2>
+            <button class="icon-btn" aria-label="Edit education"><i class="fas fa-pen"></i></button>
+          </div>
+          <div class="card-content education-list">
+            <article class="timeline-item">
+              <div class="timeline-header">
+                <div>
+                  <p class="timeline-role">Bachelor of Information Systems</p>
+                  <p class="timeline-company">University of Brawijaya</p>
+                </div>
+                <span class="timeline-date">2022 – Present</span>
+              </div>
+              <p class="timeline-desc">
+                Focused on business analytics, data management, and productivity tools while contributing to campus research initiatives.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidebar-column">
+        <section class="card sidebar-card">
+          <div class="card-header">
+            <h2>People also viewed</h2>
+            <button class="icon-btn" aria-label="More people"><i class="fas fa-arrow-right"></i></button>
+          </div>
+          <div class="sidebar-list">
+            <article class="sidebar-row">
+              <img src="foto/andi-pratama.jpg" alt="Andi Pratama" />
+              <div class="sidebar-info">
+                <p class="sidebar-name">Andi Pratama</p>
+                <p class="sidebar-meta">Looking for Backend Developer Intern</p>
+              </div>
+              <button class="btn btn-secondary btn-small">Connect</button>
+            </article>
+            <article class="sidebar-row">
+              <img src="foto/rini-wijaya.jpg" alt="Rini Wijaya" />
+              <div class="sidebar-info">
+                <p class="sidebar-name">Rini Wijaya</p>
+                <p class="sidebar-meta">UI/UX Designer Intern profile</p>
+              </div>
+              <button class="btn btn-secondary btn-small">Connect</button>
+            </article>
+          </div>
+          <a href="#" class="link-text">View all recommendations</a>
+        </section>
+
+        <section class="card sidebar-card">
+          <div class="card-header">
+            <h2>Recommendations</h2>
+            <button class="icon-btn" aria-label="Add recommendation"><i class="fas fa-plus"></i></button>
+          </div>
+          <div class="sidebar-list">
+            <article class="sidebar-row">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Dwi Santoso" />
+              <div class="sidebar-info">
+                <p class="sidebar-name">Dwi Santoso</p>
+                <p class="sidebar-meta">Senior lecturer at University of Brawijaya</p>
+              </div>
+              <button class="btn btn-secondary btn-small">View</button>
+            </article>
+            <article class="sidebar-row">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Sari Novita" />
+              <div class="sidebar-info">
+                <p class="sidebar-name">Sari Novita</p>
+                <p class="sidebar-meta">Product manager mentor</p>
+              </div>
+              <button class="btn btn-secondary btn-small">View</button>
+            </article>
+          </div>
+          <p class="recommendation-note">More recommendations help recruiters see your collaboration strengths faster.</p>
+          <a href="#" class="link-text">Improve your recommendations</a>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <div class="modal" id="edit-modal-overlay" aria-hidden="true">
+    <div class="modal-backdrop" id="edit-modal-backdrop"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <div>
+          <p class="modal-eyebrow">Edit profile details</p>
+          <h2 id="modalTitle">Edit your profile</h2>
+        </div>
+        <button class="modal-close" id="edit-modal-close" aria-label="Close modal">×</button>
+      </div>
+
+      <form id="profileForm" class="modal-form" novalidate>
+        <div class="form-group">
+          <label for="fullName">Nama Lengkap</label>
+          <input type="text" id="fullName" name="fullName" value="Lindsy" />
+        </div>
+
+        <div class="form-group">
+          <label for="headline">Headline Profesional</label>
+          <input type="text" id="headline" name="headline" value="Information Systems Major | Computer Science Student" />
+        </div>
+
+        <div class="form-group">
+          <label for="experienceRole">Jabatan/Role Pengalaman</label>
+          <input type="text" id="experienceRole" name="experienceRole" placeholder="Contoh: Student Assistant - Data Analysis" />
+        </div>
+
+        <div class="form-group">
+          <label for="experienceCompany">Nama Perusahaan/Organisasi</label>
+          <input type="text" id="experienceCompany" name="experienceCompany" placeholder="Contoh: University of Brawijaya" />
+        </div>
+
+        <div class="form-group required-group">
+          <label for="experienceDescription">Deskripsi Pencapaian Pengalaman</label>
+          <textarea id="experienceDescription" name="experienceDescription" rows="4" required placeholder="Ceritakan kontribusi dan hasil kerja Anda..."></textarea>
+          <span class="field-hint">Field ini wajib diisi supaya pengalaman terlihat kuat di mata rekruter.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="educationSchool">Nama Universitas/Sekolah</label>
+          <input type="text" id="educationSchool" name="educationSchool" placeholder="Contoh: University of Brawijaya" />
+        </div>
+
+        <div class="form-group">
+          <label for="educationDegree">Gelar/Jurusan</label>
+          <input type="text" id="educationDegree" name="educationDegree" placeholder="Contoh: Bachelor of Information Systems" />
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // safety reset in case overflow was left hidden
+      document.body.style.overflow = '';
+
+      const openEditBtn = document.getElementById('open-edit-modal');
+      const editModal = document.getElementById('edit-modal-overlay');
+      const editModalBackdrop = document.getElementById('edit-modal-backdrop');
+      const editModalClose = document.getElementById('edit-modal-close');
+      const cancelBtn = document.getElementById('cancelBtn');
+      const profileForm = document.getElementById('profileForm');
+
+      const nameHeading = document.querySelector('.profile-card__hero h1');
+      const headlineText = document.querySelector('.headline');
+      const experienceList = document.querySelector('.experience-list');
+      const educationList = document.querySelector('.education-list');
+
+      const commentInput = document.getElementById('commentInput');
+      const postCommentBtn = document.getElementById('postCommentBtn');
+      const commentsList = document.getElementById('commentsList');
+
+      // ensure modal closed
+      if (editModal) editModal.classList.remove('show');
+
+      const openModal = () => {
+        if (!editModal) return;
+        editModal.classList.add('show');
+        editModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeModal = () => {
+        if (!editModal) return;
+        editModal.classList.remove('show');
+        editModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (profileForm) profileForm.classList.remove('invalid');
+      };
+
+      if (openEditBtn) openEditBtn.addEventListener('click', openModal);
+      if (editModalClose) editModalClose.addEventListener('click', closeModal);
+      if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+      if (editModalBackdrop) editModalBackdrop.addEventListener('click', closeModal);
+
+      if (profileForm) {
+        profileForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const fullName = document.getElementById('fullName').value.trim();
+          const headline = document.getElementById('headline').value.trim();
+          const experienceRole = document.getElementById('experienceRole').value.trim();
+          const experienceCompany = document.getElementById('experienceCompany').value.trim();
+          const experienceDescription = document.getElementById('experienceDescription');
+          const educationSchool = document.getElementById('educationSchool').value.trim();
+          const educationDegree = document.getElementById('educationDegree').value.trim();
+
+          if (!experienceDescription) return;
+          experienceDescription.classList.remove('invalid-field');
+          if (!experienceDescription.value.trim()) {
+            experienceDescription.classList.add('invalid-field');
+            experienceDescription.focus();
+            return;
+          }
+
+          if (fullName && nameHeading) nameHeading.textContent = fullName;
+          if (headline && headlineText) headlineText.textContent = headline;
+
+          if (experienceList) {
+            if (experienceRole || experienceCompany || experienceDescription.value.trim()) {
+              experienceList.innerHTML = `
+                <article class="timeline-item">
+                  <div class="timeline-header">
+                    <div>
+                      <p class="timeline-role">${experienceRole || 'Experience title'}</p>
+                      <p class="timeline-company">${experienceCompany || 'Company / Organization'}</p>
+                    </div>
+                    <span class="timeline-date">Present</span>
+                  </div>
+                  <p class="timeline-desc">${experienceDescription.value.trim()}</p>
+                </article>
+              `;
+            }
+          }
+
+          if (educationList) {
+            if (educationSchool || educationDegree) {
+              educationList.innerHTML = `
+                <article class="timeline-item">
+                  <div class="timeline-header">
+                    <div>
+                      <p class="timeline-role">${educationDegree || 'Degree / Major'}</p>
+                      <p class="timeline-company">${educationSchool || 'School / University'}</p>
+                    </div>
+                    <span class="timeline-date">Ongoing</span>
+                  </div>
+                  <p class="timeline-desc">${educationDegree || ''} ${educationSchool ? 'at ' + educationSchool : ''}</p>
+                </article>
+              `;
+            }
+          }
+
+          // Ensure display-exp-desc exists on the updated DOM
+          if (experienceList) {
+            const newDesc = experienceList.querySelector('.timeline-desc');
+            if (newDesc) newDesc.id = 'display-exp-desc';
+          }
+
+          closeModal();
+        });
+      }
+
+      // Comment posting
+      function postComment() {
+        if (!commentInput || !commentsList) return;
+        const text = commentInput.value.trim();
+        if (!text) return;
+        const el = document.createElement('div');
+        el.className = 'comment-item';
+        el.innerHTML = `<div class="comment-meta"><strong>You</strong> · <span class="comment-time">now</span></div><div class="comment-body">${text}</div>`;
+        commentsList.prepend(el);
+        commentInput.value = '';
+        commentInput.focus();
+      }
+
+      if (postCommentBtn) postCommentBtn.addEventListener('click', postComment);
+      if (commentInput) commentInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          postComment();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

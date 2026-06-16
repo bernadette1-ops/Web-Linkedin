@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jobs | LinkedIn Redesign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-u6O1axN7+avvS1QzH7Hwz2Jt5/oymE1Uq+wNxxDfi4Z84WU44uWmsajdGq/cvK3U4RHY1sxjYrmxB+QZ7DUxivg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="jobs.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <a href="index.html" class="brand">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn logo" />
+        </a>
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search" aria-label="Search" />
+        </div>
+      </div>
+
+      <nav class="navbar-right">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-button">
+              <img src="foto/home.png" alt="Home" />
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-button">
+              <img src="foto/network.png" alt="My Network" />
+              <span>My Network</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="job.html" class="nav-button active">
+              <img src="foto/job.png" alt="Jobs" />
+              <span>Jobs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="inbox.html" class="nav-button">
+              <img src="foto/inbox.png" alt="Inbox" />
+              <span>Inbox</span>
+            </a>
+          </li>
+          <li class="nav-item profile-item">
+            <a href="profile_page.html" class="profile-button">
+              <img src="foto/profile.png" alt="Profile" />
+              <span>Me <i class="fas fa-caret-down"></i></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <div class="page-grid">
+      <aside class="sidebar sidebar-left">
+        <section class="card filter-card">
+          <h3>Filters</h3>
+          <div class="job-filter-bar">
+            <button class="job-filter-pill active" type="button">All</button>
+            <button class="job-filter-pill" type="button">Local</button>
+            <button class="job-filter-pill" type="button">Remote</button>
+            <button class="job-filter-pill" type="button">Freelance</button>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location</label>
+            <select id="location">
+              <option>Any Location</option>
+              <option>Jakarta</option>
+              <option>Bandung</option>
+              <option>Surabaya</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Job Type</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item"><input type="checkbox" /> Full-time</label>
+              <label class="checkbox-item"><input type="checkbox" /> Part-time</label>
+              <label class="checkbox-item"><input type="checkbox" /> Contract</label>
+              <label class="checkbox-item"><input type="checkbox" /> Internship</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="job-role">Job Role / Title</label>
+            <select id="job-role">
+              <option>Any Role</option>
+              <option>Product Manager</option>
+              <option>UI/UX Designer</option>
+              <option>FrontEnd Developer</option>
+              <option>Data Scientist</option>
+              <option>BackEnd Developer</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="salary">Salary Range</label>
+            <select id="salary">
+              <option>All Salaries</option>
+              <option>Under Rp 5.000.000</option>
+              <option>Rp 5.000.000 - Rp 8.000.000</option>
+              <option>Rp 8.000.000 - Rp 10.000.000</option>
+              <option>Above Rp 10.000.000</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="industry">Industry</label>
+            <select id="industry">
+              <option>Technology & IT</option>
+              <option>Food & Beverages (F&B)</option>
+              <option>Banking & Finance</option>
+              <option>Healthcare</option>
+              <option>E-Commerce</option>
+            </select>
+          </div>
+
+          <button class="show-results" type="button">Show Results</button>
+        </section>
+      </aside>
+
+      <section class="content-area">
+        <section class="card unified-jobs-card">
+          <div class="jobs-header">
+            <div class="jobs-header-info">
+              <h2>1.245 jobs found</h2>
+              <p>Latest opportunities matched to your profile</p>
+            </div>
+            <div class="job-filter-bar">
+              <button class="job-filter-pill active" type="button">Relevance</button>
+              <button class="job-filter-pill" type="button">Newest</button>
+            </div>
+          </div>
+
+          <div class="section-divider"></div>
+
+          <article class="job-row">
+            <div class="job-logo-small">
+              <img src="foto/linkedin.png" alt="Astra International" />
+            </div>
+            <div class="job-details">
+              <p class="job-title">UI/UX Designer</p>
+              <p class="job-company">PT Astra International Tbk.</p>
+              <p class="job-meta">Jakarta - Hybrid • 2h ago</p>
+            </div>
+            <div class="job-actions">
+              <button class="btn btn-secondary" type="button">View Process</button>
+            </div>
+          </article>
+
+          <article class="job-row">
+            <div class="job-logo-small">
+              <img src="foto/google.png" alt="Google" />
+            </div>
+            <div class="job-details">
+              <p class="job-title">FrontEnd Developer</p>
+              <p class="job-company">Google</p>
+              <p class="job-meta">Singapore - Remote • 5h ago</p>
+            </div>
+            <div class="job-actions">
+              <button class="btn btn-secondary" type="button">View Process</button>
+            </div>
+          </article>
+
+          <article class="job-row">
+            <div class="job-logo-small">
+              <img src="foto/profile.png" alt="Tokopedia" />
+            </div>
+            <div class="job-details">
+              <p class="job-title">Product Manager</p>
+              <p class="job-company">Tokopedia</p>
+              <p class="job-meta">Jakarta - Hybrid • 1d ago</p>
+            </div>
+            <div class="job-actions">
+              <button class="btn btn-secondary" type="button">View Process</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="card tracker-card">
+          <h3>Application Tracker</h3>
+          <p class="tracker-meta">Frontend Developer - Google</p>
+          <div class="tracker-steps">
+            <div class="tracker-step">
+              <div class="circle done">1</div>
+              <p>Applied</p>
+            </div>
+            <div class="line"></div>
+            <div class="tracker-step">
+              <div class="circle done">2</div>
+              <p>Screening</p>
+            </div>
+            <div class="line"></div>
+            <div class="tracker-step">
+              <div class="circle now">3</div>
+              <p>Interview</p>
+            </div>
+            <div class="line"></div>
+            <div class="tracker-step">
+              <div class="circle pending">4</div>
+              <p>Offer</p>
+            </div>
+          </div>
+          <div class="tracker-footer">
+            <span class="status-label">Current status</span>
+            <span class="status-value">Interview</span>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

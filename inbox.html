@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkedIn inbox</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="inbox.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <a href="index.html" class="brand">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn logo" />
+        </a>
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search" aria-label="Search" />
+        </div>
+      </div>
+
+      <nav class="navbar-right">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-button">
+              <img src="foto/home.png" alt="Home" />
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-button">
+              <img src="foto/network.png" alt="My Network" />
+              <span>My Network</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="job.html" class="nav-button">
+              <img src="foto/job.png" alt="Jobs" />
+              <span>Jobs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="inbox.html" class="nav-button active">
+              <img src="foto/inbox.png" alt="Inbox" />
+              <span>Inbox</span>
+              <span class="nav-badge">3</span>
+            </a>
+          </li>
+          <li class="nav-item profile-item">
+            <a href="profile_page.html" class="profile-button">
+              <img src="foto/profile.png" alt="Profile" />
+              <span>Me <i class="fas fa-caret-down"></i></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="inbox-wrapper">
+    <aside class="inbox-box notification-box">
+      <div class="box-header">
+        <h2>Notifications</h2>
+        <p>Update aktivitas terbaru</p>
+      </div>
+      <div class="notification-filters">
+        <button class="filter-pill active" type="button">All</button>
+        <button class="filter-pill" type="button">Jobs</button>
+        <button class="filter-pill" type="button">Network</button>
+        <button class="filter-pill" type="button">Mentions</button>
+      </div>
+      <div class="box-content">
+        <div class="notification-item unread">
+          <img class="noti-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Avatar" />
+          <div class="notification-body">
+            <p><strong>Budi Santoso</strong> mengirim pesan baru.</p>
+          </div>
+          <span class="notification-time">1h lalu</span>
+        </div>
+        <div class="notification-item unread">
+          <img class="noti-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Siti Aminah" />
+          <div class="notification-body">
+            <p><strong>Siti Aminah</strong> mengomentari posting Anda.</p>
+          </div>
+          <span class="notification-time">3h lalu</span>
+        </div>
+        <div class="notification-item unread">
+          <img class="noti-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Rudi Setiawan" />
+          <div class="notification-body">
+            <p><strong>Rudi Setiawan</strong> menandai Anda dalam sebuah percakapan.</p>
+          </div>
+          <span class="notification-time">Kemarin</span>
+        </div>
+      </div>
+      <div class="box-footer">
+        <button class="btn btn-primary full-width" type="button">See all notifications</button>
+      </div>
+    </aside>
+
+    <section class="inbox-box combined-messaging-box">
+      <div class="message-list-side">
+        <div class="messaging-panel">
+          <div class="messaging-header">
+            <div>
+              <h2>Messaging</h2>
+              <p>Pesan masuk</p>
+            </div>
+            <button class="btn btn-secondary">Filter</button>
+          </div>
+          <div class="messaging-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search messages" aria-label="Search messages" />
+          </div>
+          <div class="message-filter-bar">
+            <button class="message-filter-pill active" type="button">All</button>
+            <button class="message-filter-pill" type="button">Unread</button>
+            <button class="message-filter-pill" type="button">Spam</button>
+          </div>
+          <div class="message-list">
+            <a href="#" class="message-item active">
+              <img class="message-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Budi Santoso" />
+              <div class="message-content">
+                <div class="message-top">
+                  <strong>Budi Santoso</strong>
+                  <span>Recruiter</span>
+                </div>
+                <p class="message-snippet">Halo Lindsy, saya ingin mengundang Anda berdiskusi tentang posisi produk.</p>
+              </div>
+              <span class="message-time">1h</span>
+            </a>
+            <a href="#" class="message-item">
+              <img class="message-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" alt="Siti Aminah" />
+              <div class="message-content">
+                <div class="message-top">
+                  <strong>Siti Aminah</strong>
+                  <span>Data Scientist</span>
+                </div>
+                <p class="message-snippet">Terima kasih atas portofolio Anda. Bagaimana jika kita buat jadwal panggilan?</p>
+              </div>
+              <span class="message-time">3h</span>
+            </a>
+            <a href="#" class="message-item">
+              <img class="message-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Rudi Setiawan" />
+              <div class="message-content">
+                <div class="message-top">
+                  <strong>Rudi Setiawan</strong>
+                  <span>Product Lead</span>
+                </div>
+                <p class="message-snippet">Bagaimana progres slide deck untuk presentasi investor minggu ini?</p>
+              </div>
+              <span class="message-time">Kemarin</span>
+            </a>
+            <a href="#" class="message-item">
+              <img class="message-avatar" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80" alt="Anisa Rahma" />
+              <div class="message-content">
+                <div class="message-top">
+                  <strong>Anisa Rahma</strong>
+                  <span>Founder</span>
+                </div>
+                <p class="message-snippet">Senang bisa berdiskusi hari ini. Saya sudah menyiapkan outline awal.</p>
+              </div>
+              <span class="message-time">2d</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-window-side">
+        <div class="chat-window">
+          <div class="chat-header">
+            <div class="chat-user">
+              <img class="chat-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Budi Santoso" />
+              <div>
+                <h3>Budi Santoso</h3>
+                <span>Recruiter · Active now</span>
+              </div>
+            </div>
+            <button class="btn btn-secondary">Details</button>
+          </div>
+
+          <div class="chat-body">
+            <div class="chat-bubble received">
+              Halo Lindsy, terima kasih sudah meluangkan waktu. Saya ingin membahas kemungkinan bergabung sebagai Product Manager.
+            </div>
+            <div class="chat-bubble sent">
+              Terima kasih, Budi. Saya sangat tertarik. Kapan waktu terbaik bagi Anda untuk panggilan singkat?
+            </div>
+            <div class="chat-bubble received">
+              Bagus, bagaimana jika besok sore pukul 15.00? Saya akan kirim undangan kalendar.
+            </div>
+          </div>
+
+          <div class="chat-footer">
+            <textarea placeholder="Ketik pesan..." aria-label="Type a message"></textarea>
+            <button class="send-button">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.querySelectorAll('.notification-item').forEach(function (item) {
+      item.addEventListener('click', function () {
+        item.classList.remove('unread');
+      });
+    });
+
+    function setupFilterGroup(containerSelector, buttonSelector) {
+      var buttons = document.querySelectorAll(containerSelector + ' ' + buttonSelector);
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          buttons.forEach(function (btn) {
+            btn.classList.remove('active');
+          });
+          button.classList.add('active');
+        });
+      });
+    }
+
+    setupFilterGroup('.message-filter-bar', '.message-filter-pill');
+    setupFilterGroup('.notification-filters', '.filter-pill');
+
+    document.querySelectorAll('.message-item').forEach(function (item) {
+      item.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.querySelectorAll('.message-item').forEach(function (msg) {
+          msg.classList.remove('active');
+        });
+        item.classList.add('active');
+        item.classList.remove('unread-message');
+      });
+    });
+  </script>
+</body>
+</html>
